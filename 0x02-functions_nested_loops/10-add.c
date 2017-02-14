@@ -13,7 +13,7 @@ int add(int a, int b)
 	int sum;
 
 	sum = a + b;
-	if (sum < 0 && a > 0 && b > 0)
+	if ((sum < 0 && a > 0 && b > 0) || (sum > 0 && a < 0 && b < 0))
 	{
 		return (-1);
 	}
