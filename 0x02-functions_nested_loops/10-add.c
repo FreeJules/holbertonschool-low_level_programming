@@ -12,6 +12,13 @@ int add(int a, int b)
 {
 	int sum;
 
-	sum = (int) (a + b);
-	return (sum);
+	sum = a + b;
+	if (sum < 0 && a > 0 && b > 0)
+	{
+		return (-1);
+	}
+	else
+	{
+		return (sum);
+	}
 }
