@@ -22,4 +22,5 @@ int main(void)
 		n += 2;
 	}
 	printf("\n");
+	return (0);
 }
