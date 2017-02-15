@@ -1,39 +1,27 @@
 #include <stdio.h>
 
 /**
- * main - print first 98 Fibonacci numbers, followed by a newline
- * it prints only till 92 and then you ahv to manually append last 2 digits
- *  because it gets out of range
+ * fibonacci_93 - printing f93 and higher
+ * @a: f91
+ * @b: f92
  *
- * Return: Always 0.
- */
-int main(void)
+ * Return: none
+ **/
+void fibonacci_93(unsigned long a, unsigned long b)
 {
-	unsigned long i, j, n;
 	unsigned long i1, j1, n1, i2, j2, n2;
 	int c;
 
-	i = 1;
-	j = 2;
-	n = 2;
-	while (n <= 90)
-	{
-		printf("%lu, %lu, ", i, j);
-		i = i + j;
-		j = j + i;
-		n += 2;
-	}
-	printf("%lu, %lu, ", i, j);
 	c = 1;
-	i1 = i / 100;
-	j1 = j / 100;
-	i2 = i % 100;
-	j2 = j % 100;
+	i1 = a / 100;
+	j1 = b / 100;
+	i2 = a % 100;
+	j2 = b % 100;
 	while (c <= 6)
 	{
 		n1 = i1 + j1;
 		n2 = i2 + j2;
-		if (n2 > 100)
+		if (n2 >= 100)
 		{
 			n2 = n2 % 100;
 			n1 = n1 + 1;
@@ -49,6 +37,28 @@ int main(void)
 		j2 = n2;
 		c++;
 	}
+}
+/**
+ * main - entry point, print fibonacci numbers to 92
+ *
+ * Return: Always 0.
+ **/
+int main(void)
+{
+	unsigned long i, j, n;
+
+	i = 1;
+	j = 2;
+	n = 2;
+	while (n <= 90)
+	{
+		printf("%lu, %lu, ", i, j);
+		i = i + j;
+		j = j + i;
+		n += 2;
+	}
+	printf("%lu, %lu, ", i, j);
+	fibonacci_93(i, j);
 	printf("\n");
 	return (0);
 }
