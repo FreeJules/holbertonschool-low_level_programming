@@ -14,7 +14,6 @@ int main(void)
 	sum = 0;
 	while (i <= 4000000 || j <= 4000000)
 	{
-		printf("%lu, %lu, ", i, j);
 		if (i % 2 == 0)
 			sum = sum + i;
 		if (j % 2 == 0)
@@ -22,5 +21,5 @@ int main(void)
 		i = i + j;
 		j = j + i;
 	}
-	printf("Sum is %lu\n", sum);
+	printf("%ld\n", sum);
 }
