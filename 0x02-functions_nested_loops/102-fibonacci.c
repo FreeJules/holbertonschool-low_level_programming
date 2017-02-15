@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - entry point
+ * main - print first 50 Fibonacci numbers, followed by a newline
  *
  * Return: Always 0.
  */
 int main(void)
 {
-	unsigned long i, j, n;
+	long i, j, n;
 
 	i = 1;
 	j = 2;
