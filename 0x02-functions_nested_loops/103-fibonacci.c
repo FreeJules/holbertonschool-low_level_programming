@@ -22,4 +22,5 @@ int main(void)
 		j = j + i;
 	}
 	printf("%ld\n", sum);
+	return (0);
 }
