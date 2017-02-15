@@ -25,7 +25,10 @@ void fibonacci_93(unsigned long a, unsigned long b)
 		{
 			n2 = n2 % 100;
 			n1 = n1 + 1;
-			printf("%lu%lu", n1, n2);
+			if (n2 < 10)
+				printf("%lu0%lu", n1, n2);
+			else
+				printf("%lu%lu", n1, n2);
 		}
 		else
 			printf("%lu%lu", n1, n2);
