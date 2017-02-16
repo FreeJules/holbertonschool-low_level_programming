@@ -10,6 +10,11 @@ void print_number(int n)
 {
 	int start, div, i, first_non_zero;
 
+	if (n == 0)
+	{
+		_putchar('0');
+		return;
+	}
 	div = 1000000000;
 	if (n < 0)
 	{
@@ -29,6 +34,4 @@ void print_number(int n)
 		div = div / 10;
 		i++;
 	}
-	if (first_non_zero == 0)
-		_putchar(first_non_zero + '0');
 }
