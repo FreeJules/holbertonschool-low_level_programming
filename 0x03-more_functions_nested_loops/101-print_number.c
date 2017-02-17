@@ -12,12 +12,15 @@ void print_number(int n)
 
 	div = 100000000;
 	last_digit = n % 10;
+	if (last_digit < 0)
+	{
+		_putchar('-');
+		last_digit = last_digit * (-1);
+	}
 	n = (n / 10);
 	if (n < 0)
 	{
-		_putchar('-');
 		n = n * (-1);
-		last_digit = last_digit * (-1);
 	}
 	first_non_zero = 0;
 	while (div >= 1)
