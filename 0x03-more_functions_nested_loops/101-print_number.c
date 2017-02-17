@@ -8,9 +8,8 @@
  */
 void print_number(int n)
 {
-	int div, first_non_zero, last_digit;
+	int div, first_non_zero, last_digit, tmp, lenght;
 
-	div = 100000000;
 	last_digit = n % 10;
 	if (last_digit < 0)
 	{
@@ -21,6 +20,15 @@ void print_number(int n)
 	if (n < 0)
 	{
 		n = n * (-1);
+	}
+	lenght  = 0;
+	div = 1;
+	tmp = n;
+	while (tmp > 0)
+	{
+		lenght += 1;
+		div *= 10;
+		tmp = tmp / 10;
 	}
 	first_non_zero = 0;
 	while (div >= 1)
