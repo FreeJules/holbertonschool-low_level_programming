@@ -15,7 +15,7 @@ void print_number(int n)
 		_putchar('0');
 		return;
 	}
-	div = 1000000000;
+	div = 100000000;
 	last_digit = n % 10;
 	n = (n / 10);
 	if (n < 0)
