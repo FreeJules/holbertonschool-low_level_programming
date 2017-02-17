@@ -10,11 +10,6 @@ void print_number(int n)
 {
 	int div, first_non_zero, last_digit;
 
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
 	div = 100000000;
 	last_digit = n % 10;
 	n = (n / 10);
