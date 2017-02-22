@@ -33,6 +33,6 @@ void puts_half(char *str)
 				i++;
 			}
 		}
-		_putchar('\n');
 	}
+	_putchar('\n');
 }
