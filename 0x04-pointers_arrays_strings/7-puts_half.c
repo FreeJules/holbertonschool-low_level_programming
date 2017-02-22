@@ -23,10 +23,15 @@ void puts_half(char *str)
 		else
 			half = length - (length - 1) / 2;
 		i = half;
-		while (*(str + i) != '\0')
+		if (i == 1)
+			_putchar(*str);
+		else
 		{
-			_putchar(*(str + i));
-			i++;
+			while (*(str + i) != '\0')
+			{
+				_putchar(*(str + i));
+				i++;
+			}
 		}
 		_putchar('\n');
 	}
