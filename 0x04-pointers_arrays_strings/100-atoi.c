@@ -21,26 +21,20 @@ int _if_not_number(char *s)
 		if (*(s + i) >= '0' && *(s + i) <= '9')
 		{
 			if (number > 0)
-			{
 				number = number * 10 + (*(s + i) - '0');
-			}
 			else
-			{
 				number = *(s + i) - '0';
-			}
 		}
 		if (number != 0 && (*(s + i) < '0' || *(s + i) > '9'))
 			break;
 		i++;
 	}
+	if (*(s + i) == '\0' && number == 0)
+		return (0);
 	if (plus >= minus)
-	{
 		return (number);
-	}
 	else
-	{
 		return (number * (-1));
-	}
 }
 /**
  * _atoi - prints a string, followed by a new line
@@ -51,8 +45,7 @@ int _if_not_number(char *s)
  */
 int _atoi(char *s)
 {
-	int i;
-	int number, next;
+	int i, number, next;
 	char _1st, _2nd;
 
 	number = 0;
@@ -70,7 +63,6 @@ int _atoi(char *s)
 				number = number * 10 - next;
 				i++;
 			}
-			return (number);
 		}
 		if (_1st >= '0' && _1st <= '9')
 		{
@@ -82,13 +74,9 @@ int _atoi(char *s)
 				number = number * 10 + next;
 				i++;
 			}
-			return (number);
 		}
 		if ((_1st < '0' || _1st > '9') && (_2nd < '0' || _2nd > '9'))
-		{
 			number = _if_not_number(s);
-			return (number);
-		}
 	}
-	return (0);
+	return (number);
 }
