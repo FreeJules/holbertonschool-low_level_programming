@@ -29,7 +29,7 @@ int _if_not_number(char *s)
 			break;
 		i++;
 	}
-	if (*(s + i) == '\0' && number == 0)
+	if (number == 0)
 		return (0);
 	if (plus >= minus)
 		return (number);
