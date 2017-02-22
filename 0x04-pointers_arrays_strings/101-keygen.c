@@ -12,6 +12,7 @@ int main(void)
 	int sum = 0;
 	char c;
 
+	srand(time(NULL));
 	while (sum < 2772)
 	{
 		c = rand() % 94 + 33;
