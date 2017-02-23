@@ -9,15 +9,12 @@ int _if_not_number(char *s)
 {
 	int number = 0;
 	int minus = 0;
-	int plus = 0;
 	int i = 0;
 
 	while (*(s + i) != '\0')
 	{
 		if (*(s + i) == '-')
 			minus++;
-		if (*(s + i) == '+')
-			plus++;
 		if (*(s + i) >= '0' && *(s + i) <= '9')
 		{
 			if (number > 0)
@@ -31,7 +28,7 @@ int _if_not_number(char *s)
 	}
 	if (number == 0)
 		return (0);
-	if (plus >= minus)
+	if (minus % 2 == 0)
 		return (number);
 	else
 		return (number * (-1));
