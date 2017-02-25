@@ -48,6 +48,44 @@ void rev_string(char *s)
 		}
 	}
 }
+/**
+ * _carry - set r[j] and return carry
+ * @l1: length of n1
+ * @l2: length of n2
+ * @n1: string n1
+ * @n2: string n2
+ * @r: buffer for new string
+ * @j: index for buffer
+ * @carry: carry
+ *
+ * Return: carry
+ */
+int _carry(int l1, int l2, char *n1, char *n2, char *r, int j, int carry)
+{
+	int sum, d1, d2;
+
+	sum = 0;
+	if (l1 >= 0)
+		d1 = n1[l1] - '0';
+	else
+		d1 = 0;
+	if (l2 >= 0)
+		d2 = n2[l2] - '0';
+	else
+		d2 = 0;
+	sum = d1 + d2 + carry;
+	if (sum >= 10)
+	{
+		r[j] = sum % 10 + '0';
+		carry = 1;
+	}
+	else
+	{
+		r[j] = sum + '0';
+		carry = 0;
+	}
+	return (carry);
+}
 
 /**
  * infinite_add - adds two numbers
@@ -61,38 +99,19 @@ void rev_string(char *s)
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int l1, l2, j;
-	int d1, d2, sum, carry;
+	int carry;
 
 	l1 = _strlen(n1);
 	l2 = _strlen(n2);
 	if (l1 > size_r - 1 || l2 > size_r - 1)
 		return (0);
 	carry = 0;
-	sum = 0;
 	j = 0;
 	l1--;
 	l2--;
 	while (l1 >= 0 || l2 >= 0)
 	{
-		if (l1 >= 0)
-			d1 = n1[l1] - '0';
-		else
-			d1 = 0;
-		if (l2 >= 0)
-			d2 = n2[l2] - '0';
-		else
-			d2 = 0;
-		sum = d1 + d2 + carry;
-		if (sum >= 10)
-		{
-			r[j] = sum % 10 + '0';
-			carry = 1;
-		}
-		else
-		{
-			r[j] = sum + '0';
-			carry = 0;
-		}
+		carry = _carry(l1, l2, n1, n2, r, j, carry);
 		l1--;
 		l2--;
 		j++;
