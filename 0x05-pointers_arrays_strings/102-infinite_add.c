@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * _strlen - returns the lenght of a string
  * @s: pointer to s
@@ -62,7 +61,6 @@ void rev_string(char *s)
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int l1, l2, j;
-	char c1, c2;
 	int d1, d2, sum, carry;
 
 	l1 = _strlen(n1);
@@ -74,20 +72,14 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	j = 0;
 	l1--;
 	l2--;
-	while (l1 >= 0 || l2 >= 0)
+	while (l1 > 0 || l2 > 0)
 	{
 		if (l1 >= 0)
-		{
-			c1 = n1[l1];
-			d1 = c1 - '0';
-		}
+			d1 = n1[l1] - '0';
 		else
 			d1 = 0;
 		if (l2 >= 0)
-		{
-			c2 = n2[l2];
-			d2 = c2 - '0';
-		}
+			d2 = n2[l2] - '0';
 		else
 			d2 = 0;
 		sum = d1 + d2 + carry;
@@ -105,8 +97,15 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		l2--;
 		j++;
 	}
-	r[j] = carry + '0';
-	r[j + 1] = '\0';
+	if (carry == 1)
+	{
+		r[j] = carry + '0';
+		r[j + 1] = '\0';
+		if (_strlen(r) + 1 > size_r) /* _strlen(r) + '\0' */
+			return (0);
+	}
+	else
+		r[j] = '\0';
 	rev_string(r);
 	return (r);
 }
