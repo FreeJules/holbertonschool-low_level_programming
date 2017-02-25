@@ -65,14 +65,14 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	l1 = _strlen(n1);
 	l2 = _strlen(n2);
-	if (l1 >= size_r - 1 || l2 >= size_r - 1)
+	if (l1 > size_r - 1 || l2 > size_r - 1)
 		return (0);
 	carry = 0;
 	sum = 0;
 	j = 0;
 	l1--;
 	l2--;
-	while (l1 > 0 || l2 > 0)
+	while (l1 >= 0 || l2 >= 0)
 	{
 		if (l1 >= 0)
 			d1 = n1[l1] - '0';
