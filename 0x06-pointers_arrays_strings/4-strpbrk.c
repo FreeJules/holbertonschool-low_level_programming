@@ -29,6 +29,8 @@ char *_strpbrk(char *s, char *accept)
 	int i, j, len;
 
 	len = _strlen(s);
+	if (len == 0)
+		return (s + len);
 	for (i = 0; i <= len; i++)
 	{
 		for (j = 0; accept[j] != '\0'; j++)
