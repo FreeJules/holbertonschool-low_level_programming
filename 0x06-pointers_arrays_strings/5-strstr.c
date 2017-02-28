@@ -42,7 +42,7 @@ int _compare(char *haystack, char *needle, int i)
 		else
 			break;
 	}
-	return (i);
+	return (1);
 }
 /**
  * _strstr - finds substring
@@ -59,7 +59,7 @@ char *_strstr(char *haystack, char *needle)
 	i = 0;
 	while (haystack[i] != '\0')
 	{
-		if (haystack[i] != needle[0])
+		if (haystack[i] != needle[0] && needle[0] != '\0')
 			i++;
 		else
 		{
