@@ -21,7 +21,7 @@ int _strlen(char *s)
  * _compare - compares 2 strings
  * @haystack: string 1
  * @needle: string 2
- * @staring at char i for haystack
+ * @i: starting at char i for haystack
  *
  * Return: 0 if the same
  */
