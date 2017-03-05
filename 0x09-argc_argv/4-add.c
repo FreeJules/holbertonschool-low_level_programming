@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 	while (i < argc)
 	{
 		n = atoi(argv[i]);
-			if (n == -3)
+			if (n == 0)
 			{
 				printf("Error\n");
 				return (0);
