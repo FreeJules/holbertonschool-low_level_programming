@@ -50,10 +50,7 @@ char **strtow(char *str)
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
-	c = count_words(str);
-	if (c == 0)
-		return (NULL);
-	words = malloc(sizeof(char *) * c + 1);
+	words = malloc(sizeof(char *) * count_words(str) + 1);
 	if (words == NULL)
 		return (NULL);
 	i = 0;
