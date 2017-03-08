@@ -19,7 +19,6 @@ int count_words(char *str)
 			count++;
 		i++;
 	}
-	printf("word count %d\n", count);
 	return (count);
 }
 /**
@@ -34,7 +33,6 @@ int _wrdlen(char *s)
 
 	while (*(s + count) != ' ')
 		count++;
-	printf("word len %d\n", count);
 	return (count);
 }
 /**
@@ -50,7 +48,10 @@ char **strtow(char *str)
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
-	words = malloc(sizeof(char *) * count_words(str) + 1);
+	c = count_words(str);
+	if (c == 0)
+		return (NULL);
+	words = malloc(sizeof(char *) * c + 1);
 	if (words == NULL)
 		return (NULL);
 	i = 0;
