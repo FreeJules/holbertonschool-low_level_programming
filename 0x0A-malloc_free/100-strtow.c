@@ -1,6 +1,12 @@
 #include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
+/**
+ * count_words - counts separate words in string
+ * @str: pointer to s
+ *
+ * Return: number of words
+ */
 int count_words(char *str)
 {
 	int i, count;
@@ -13,6 +19,7 @@ int count_words(char *str)
 			count++;
 		i++;
 	}
+	printf("word count %d\n", count);
 	return (count);
 }
 /**
@@ -27,6 +34,7 @@ int _wrdlen(char *s)
 
 	while (*(s + count) != ' ')
 		count++;
+	printf("word len %d\n", count);
 	return (count);
 }
 /**
@@ -37,12 +45,15 @@ int _wrdlen(char *s)
  */
 char **strtow(char *str)
 {
-	int i, j, k, h, len;
+	int i, j, k, h, c, len;
 	char **words;
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
-	words = malloc(sizeof(char *) * count_words(str) + 1);
+	c = count_words(str);
+	if (c == 0)
+		return (NULL);
+	words = malloc(sizeof(char *) * c + 1);
 	if (words == NULL)
 		return (NULL);
 	i = 0;
@@ -50,9 +61,7 @@ char **strtow(char *str)
 	while (str[i] != '\0')
 	{
 		while (str[i] == ' ' && str[i] != '\0')
-		{
 			i++;
-		}
 		if (str[i] == '\0')
 			words[j] = malloc(sizeof(char));
 		else
