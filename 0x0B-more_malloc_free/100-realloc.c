@@ -24,15 +24,19 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	}
 	if (ptr == NULL)
+	{
 		array = malloc(new_size);
-	else
-		array = malloc(sizeof(char) * new_size);
+		if (array == NULL)
+			return (NULL);
+		return (array);
+	}
+	array = malloc(sizeof(char) * new_size);
 	if (array == NULL)
 		return (NULL);
 	if (new_size > old_size)
 	{
 		helper = ptr;
-		for (i = 0; i <= old_size; i++)
+		for (i = 0; i < old_size; i++)
 			array[i] = helper[i];
 		free(ptr);
 	}
