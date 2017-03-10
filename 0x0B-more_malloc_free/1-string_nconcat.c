@@ -52,17 +52,20 @@ char *_strncat(char *dest, char *src, int n)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *new_str;
-	int len_s1;
+	unsigned int len_s1, len_s2;
 
 	if (s1 == NULL)
 		len_s1 = 0;
 	else
 		len_s1 = _strlen(s1);
+	len_s2 = _strlen(s2);
+	if (len_s1 < n)
+		n = len_s2;
 	new_str = malloc((len_s1 + n + 1) * sizeof(char));
 	if (new_str == NULL)
 		return (NULL);
 	new_str = _strncat(new_str, s1, len_s1);
-	if (_strlen(s2) == 0)
+	if (len_s2 == 0)
 		*(new_str + len_s1) = '\0';
 	else
 		_strncat((new_str + len_s1), s2, n);
