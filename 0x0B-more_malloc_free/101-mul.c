@@ -198,19 +198,23 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
  */
 char *mult_by_ld(char *buffer, char ld_n1, char *n2, int len_n2, int k)
 {
-	int i, j, carry;
+	int i, j;
+	int carry, num, num1, num2;
 
 	carry = 0;
-	for (i = len_n2 - 1, j = 0; i>= 0; i--, j++)
+	for (i = len_n2 - 1, j = 0; i >= 0; i--, j++)
 	{
-		while(k >= 0)
+		while(k > 0)
 		{
-			buffer[j] = 0;
+			buffer[j] = '0';
 			k--;
 			j++;
 		}
-		buffer[j] = (n2[i] * ld_n1 + carry) % 10;
-		carry = (n2[i] * ld_n1) / 10;
+		num1 = n2[i] - '0';
+		num2 = ld_n1 - '0';
+		num = (num1 * num2 + carry) % 10;
+		buffer[j] = num + '0';
+		carry = num2 * num1 / 10;
 	}
 	return (buffer);
 }
@@ -261,12 +265,10 @@ int main(int argc, char **argv)
 		k = 0;
 		for (j = len1 - 1; j > i; j--)
 			k++;
-		n2 = mult_by_ld(n2 + k, argv[1][i], argv[2], len2, k);
+		n2 = mult_by_ld(n2, argv[1][i], argv[2], len2, k);
 		rev_string(n2);
 		n1 = result;
-		print_it(result);
 		result = infinite_add(n1, n2, result, len * sizeof(char));
-		print_it(result);
 	}
 	print_it(result);
 	return (0);
