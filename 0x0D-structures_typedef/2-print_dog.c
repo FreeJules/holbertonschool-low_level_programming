@@ -2,27 +2,22 @@
 #include <stdio.h>
 /**
  * print_dog - prints a struct dog
- * @d: struct to print
+ * @d: pointer to struct to print
  *
  * Return: None
  */
 void print_dog(struct dog *d)
 {
-	struct dog *ptr;
-
-	ptr = d;
-	if (ptr == NULL)
-		return;
-	if ((*ptr).name == NULL)
-		printf("Name: (nil)\n");
-	else
-		printf("Name: %s\n", (*ptr).name);
-	if ((*ptr).age == 0)
-		printf("Age: (nil)\n");
-	else
-		printf("Age: %.1f\n", (*ptr).age);
-	if ((*ptr).name == NULL)
-		printf("Owner: (nil)\n");
-	else
-		printf("Owner: %s\n", (*ptr).owner);
+	if (d != NULL)
+	{
+		if ((*d).name != NULL)
+			printf("Name: %s\n", (*d).name);
+		else
+			printf("Name: (nil)\n");
+		printf("Age: %.1f\n", (*d).age);
+		if ((*d).owner != NULL)
+			printf("Owner: %s\n", (*d).owner);
+		else
+			printf("Owner: (nil)\n");
+	}
 }
