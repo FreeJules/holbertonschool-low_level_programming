@@ -9,7 +9,6 @@
 int main(int argc, char **argv)
 {
 	int n, i;
-	(char *)ptr;
 
 	if (argc != 2)
 	{
@@ -22,10 +21,9 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(2);
 	}
-	ptr = (char *)main;
 	for (i = 0; i < n; i++)
 	{
-		printf("%x", (ptr[i] & 0xff);
+		printf("%x", (((char *)main)[i] & 0xff));
 		if (i != (n - 1))
 			printf(" ");
 		else
