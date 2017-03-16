@@ -21,16 +21,13 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(2);
 	}
-	if (n > 0)
+	for (i = 0; i < n; i++)
 	{
-		for (i = 0; i < n; i++)
-		{
-			printf("%02hhx", (((char *)main)[i]));
-			if (i != (n - 1))
-				printf(" ");
-			else
-				printf("\n");
-		}
+		printf("%02hhx", ((char *)main)[i]);
+		if (i != (n - 1))
+			printf(" ");
+		else
+			printf("\n");
 	}
 	return (0);
 }
