@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <udis86.h>
 /**
  * main - check the code for Holberton School students.
  * argc: number of args
@@ -14,13 +13,13 @@ int main(int argc, char **argv)
 	if (argc != 2)
 	{
 		printf("Error\n");
-		exit (1);
+		exit(1);
 	}
 	n  = atoi(argv[1]);
 	if (n < 0)
 	{
 		printf("Error\n");
-		exit (2);
+		exit(2);
 	}
 	for (i = 0; i < n; i++)
 		printf("%x ", ((unsigned char *)main)[i]);
