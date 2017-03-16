@@ -22,7 +22,12 @@ int main(int argc, char **argv)
 		exit(2);
 	}
 	for (i = 0; i < n; i++)
-		printf("%x ", ((unsigned char *)main)[i]);
-	printf("\n");
+	{
+		printf("%x", ((unsigned char *)main)[i]);
+		if (i != (n - 1))
+			printf(" ");
+		else
+			printf("\n");
+	}
 	return (0);
 }
