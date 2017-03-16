@@ -2,8 +2,8 @@
 #include <stdlib.h>
 /**
  * main - check the code for Holberton School students.
- * argc: number of args
- * argv: pointers to string args
+ * @argc: number of args
+ * @argv: pointers to string args
  * Return: Always 0 on success
  */
 int main(int argc, char **argv)
