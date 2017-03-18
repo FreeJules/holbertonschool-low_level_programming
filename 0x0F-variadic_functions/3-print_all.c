@@ -74,11 +74,10 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", ptr_sep);
 				(types + j)->f(list);
-				break;
+				ptr_sep = ", ";
 			}
 			j++;
 		}
-		ptr_sep = ", ";
 		i++;
 	}
 	va_end(list);
