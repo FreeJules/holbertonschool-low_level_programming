@@ -1,11 +1,12 @@
 #include "lists.h"
 /**
- * check_for_loop - function finds if  list has a loop
+ * remove_loop - finds the loop in a linked list
  * @head: pointer to first node in the list
- * Return: pointr to node where loop stsrts, NULL if no loop
+ * Return:  The address of the node where the loop starts, or NULL
  */
-listint_t *check_for_loop(listint_t *head)
+void remove_loop(listint_t *head)
 {
+
 	listint_t *tmp, *start;
 	size_t i, count;
 
@@ -14,21 +15,20 @@ listint_t *check_for_loop(listint_t *head)
 	while (tmp)
 	{
 		count++;
-		tmp = tmp->next;
 		start = head;
 		i = 0;
 		while (i < count)
 		{
-			if (start != tmp)
+			if (start == tmp->next)
 			{
-				start = start->next;
-				i++;
+				tmp->next = NULL;
+				return;
 			}
-			else
-				return (tmp);
+			start = start->next;
+			i++;
 		}
+		tmp = tmp->next;
 	}
-	return (NULL);
 }
 /**
  * free_listint_safe - frees a listint_t linked list, function can print
@@ -38,21 +38,16 @@ listint_t *check_for_loop(listint_t *head)
  */
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *tmp, *start;
+	listint_t *tmp;
 	size_t count;
 
-	start = check_for_loop(*h);
+	remove_loop(*h);
 	count = 0;
 	while (h != NULL && *h != NULL)
 	{
 		count++;
 		tmp = *h;
 		*h = tmp->next;
-		if (*h == start && *h != NULL)
-		{
-			*h = start->next;
-			start->next = NULL;
-		}
 		free(tmp);
 	}
 	return (count);
