@@ -25,7 +25,7 @@ listint_t *check_for_loop(listint_t *head)
 				i++;
 			}
 			else
-				return (start);
+				return (tmp);
 		}
 	}
 	return (NULL);
@@ -48,18 +48,12 @@ size_t free_listint_safe(listint_t **h)
 		count++;
 		tmp = *h;
 		*h = tmp->next;
-		if (start == NULL)
-			free(tmp);
-		else
+		if (*h == start && *h != NULL)
 		{
-			if (tmp != start)
- 				free(tmp);
-			else
-			{
-				tmp->next = NULL;
-				count--;
-			}
+			*h = start->next;
+			start->next = NULL;
 		}
+		free(tmp);
 	}
 	return (count);
 }
