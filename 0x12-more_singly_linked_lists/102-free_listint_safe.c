@@ -1,8 +1,8 @@
 #include "lists.h"
 /**
- * remove_loop - finds the loop in a linked list
+ * remove_loop - finds the loop in a linked list and adds NULL to end it
  * @head: pointer to first node in the list
- * Return:  The address of the node where the loop starts, or NULL
+ * Return:  none
  */
 void remove_loop(listint_t *head)
 {
