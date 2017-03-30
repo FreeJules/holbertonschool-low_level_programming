@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * print_firat - two sentences to print before main
+ * print_first - two sentences to print before main
  * Return: none
  */
 void print_first(void)
