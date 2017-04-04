@@ -30,7 +30,7 @@ int _strlen(char *s)
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, len, bytes_written;
+	int fd, len, bytes_written, closed;
 	mode_t mode = S_IRUSR | S_IWUSR;
 
 	if (filename == NULL)
@@ -45,7 +45,9 @@ int create_file(const char *filename, char *text_content)
 	}
 	len = _strlen(text_content);
 	bytes_written = write(fd, text_content, len);
-	close(fd);
+	closed = close(fd);
+	if (closed == -1)
+		return (-1);
 	if (bytes_written == -1)
 		return (-1);
 	return (1);
