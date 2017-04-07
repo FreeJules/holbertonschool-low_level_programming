@@ -1,3 +1,4 @@
+
 #include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
@@ -61,13 +62,11 @@ char **strtow(char *str)
 		while (str[i] == ' ' && str[i] != '\0')
 			i++;
 		if (str[i] == '\0')
-			words[j] = malloc(sizeof(char));
-		else
-			words[j] = malloc(sizeof(char) * _wrdlen(str + i) + 1);
-		if (str[i] == '\0')
-			words[j] = '\0';
-		else
 		{
+			words[j] = NULL;
+			return (words);
+		}
+		words[j] = malloc(sizeof(char) * _wrdlen(str + i) + 1);
 			if (words[j] == NULL)
 			{
 				for (k = j - 1; k >= 0; k--)
@@ -80,7 +79,6 @@ char **strtow(char *str)
 				words[j][h] = str[i];
 			words[j][h] = '\0';
 			j++;
-		}
 	}
 	return (words);
 }
