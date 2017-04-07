@@ -1,4 +1,3 @@
-
 #include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
@@ -52,7 +51,7 @@ char **strtow(char *str)
 	c = count_words(str);
 	if (c == 0)
 		return (NULL);
-	words = malloc(sizeof(char *) * c + 1);
+	words = malloc(sizeof(char *) * (c + 1));
 	if (words == NULL)
 		return (NULL);
 	i = 0;
