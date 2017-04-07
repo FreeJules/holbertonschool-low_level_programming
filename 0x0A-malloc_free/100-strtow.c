@@ -79,5 +79,6 @@ char **strtow(char *str)
 			words[j][h] = '\0';
 			j++;
 	}
+	words[j] = NULL;
 	return (words);
 }
