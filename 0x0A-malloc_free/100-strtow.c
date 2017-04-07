@@ -31,7 +31,7 @@ int _wrdlen(char *s)
 {
 	int count = 0;
 
-	while (*(s + count) != ' ')
+	while (*(s + count) != ' ' && *(s + count) != '\0')
 		count++;
 	return (count);
 }
@@ -65,19 +65,19 @@ char **strtow(char *str)
 			words[j] = NULL;
 			return (words);
 		}
-		words[j] = malloc(sizeof(char) * _wrdlen(str + i));
-			if (words[j] == NULL)
-			{
-				for (k = j - 1; k >= 0; k--)
-					free(words[k]);
-				free(words);
-				return (NULL);
-			}
-			len = _wrdlen(str + i);
-			for (h = 0; h < len && str[i] != '\0'; h++, i++)
-				words[j][h] = str[i];
-			words[j][h] = '\0';
-			j++;
+		words[j] = malloc(sizeof(char) * _wrdlen(str + i) + 1);
+		if (words[j] == NULL)
+		{
+			for (k = j - 1; k >= 0; k--)
+				free(words[k]);
+			free(words);
+			return (NULL);
+		}
+		len = _wrdlen(str + i);
+		for (h = 0; h < len && str[i] != '\0'; h++, i++)
+			words[j][h] = str[i];
+		words[j][h] = '\0';
+		j++;
 	}
 	words[j] = NULL;
 	return (words);
