@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-
+#include <errno.h>
 /**
  * struct list_s - singly linked list
  * @str: string - (malloc'ed string)
@@ -51,8 +51,13 @@ list_t *path_dirs_list(char **);
 int _strlen(const char *s);
 char *_strcat(char *, const char *);
 char *_strcpy(char *, const char *);
+int _strcmp(char *s1, char *s2);
 /* _setenv.c  */
+int find_len(char *str, char c);
 char *_strchr(const char *str, char c);
 int _putenv(char *);
 int _setenv(const char *name, const char *value, int overwrite);
+/*  _unsetenv.c */
+int delete_node(list_t **head, char *ptr);
+int _unsetenv(const char *name);
 #endif

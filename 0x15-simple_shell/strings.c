@@ -16,22 +16,6 @@ int _strlen(const char *s)
 	return (count);
 }
 /**
- * _const_strlen - returns the lenght of a string
- * @s: pointer to s
- * Return: 0 on success
- */
-int _const_strlen(const char *s)
-{
-	int count = 0;
-
-	if (s != '\0')
-	{
-		while (*(s + count) != '\0')
-			count++;
-	}
-	return (count);
-}
-/**
  * _strncmp - compares two strings for n amount of chars
  * @s1: pointer to string s1
  * @s2: pointer to string s2

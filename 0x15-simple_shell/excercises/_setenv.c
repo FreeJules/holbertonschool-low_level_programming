@@ -1,5 +1,15 @@
 #include "holberton.h"
-#include <errno.h>
+int find_len(char *str, char c)
+{
+	int i;
+
+	i = 0;
+	while (str[i] != c && str[i] != '\0')
+		i++;
+	if (str[i] == '\0')
+		return (0);
+	return (i);
+}
 /**
  * _strchr - locates character in string
  * @str: pointer to a string
@@ -12,10 +22,10 @@ char *_strchr(const char *str, char c)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] == c)
-
-			return ((char *)str + i);
-		i++;
+		if (str[i] != c)
+			i++;
+		else
+			return ((char *)(str + i));
 	}
 	return (NULL);
 }
@@ -26,31 +36,40 @@ char *_strchr(const char *str, char c)
  */
 int _putenv(char *str)
 {
-	char **current;
-	int namelen, envlen, equal, i;
+/*	char **current;
+ */	int namelen, envlen, equal, i;
 	char *tmp;
 	char **newenv;
 
+	printf("_putenv str %s\n", str);
 	/*
 	 * Find out how much of str to match when searching
 	 * for a string to replace.
 	 */
 	tmp = _strchr(str, '=');
-	namelen = tmp - str;
+	printf("_putenv tmp %s\n", tmp);
+	namelen = find_len(str, '=');
 	++namelen;
 	/*
 	 * Search for an existing string in the environment and find the
 	 * length of environ.  If found, replace and exit.
 	 */
 	envlen = 0;
-	for (current = environ; *current; current++)
+	/* for (current = environ; *current; current++) */
+	for (i = 0; environ[i] != NULL; i++)
 	{
 		++envlen;
-		equal = _strncmp(str, *current, namelen);
+		equal = _strncmp(str, environ[i], namelen);
+		printf("_putenv eql %d\t %d\n", equal, namelen);
 		if (equal == 0)
 		{
 			/* variable exists and found, insert the new version */
-			*current = str;
+			/* *current = str; */
+			environ[i] = str;
+			printf("_putenv current %s\t%s\n", environ[i], str);
+			printf("_putenv address %p\t%p\n", (void *) &environ[i], (void *) &str);
+			printf("\n\nEnviron\n\n");
+			print_tab(environ);
 			return (0);
 		}
 	}
@@ -66,7 +85,13 @@ int _putenv(char *str)
 	/* environ = newenv; */
 	newenv[envlen] = str;
 	newenv[envlen + 1] = NULL;
+	printf("\n\nnewenv\n\n");
 	print_tab(newenv);
+	printf("\n\nEnviron\n\n");
+	print_tab(environ);
+	environ = newenv;
+	printf("\n\nEnviron = new \n\n");
+        print_tab(environ);
 	return (0);
 }
 /**
@@ -104,7 +129,7 @@ int _setenv(const char *name, const char *value, int overwrite)
 	if (ptr != NULL && overwrite == 0)
 		return (0);
 /* Error = ENOMEM if insufficient memory to add new var to the environment. */
-	new_ptr = malloc(_const_strlen(name) + _const_strlen(value) + 2);
+	new_ptr = malloc(_strlen(name) + _strlen(value) + 2);
 	/* +2 for '=' and null terminator */
 	if (new_ptr == NULL)
 	{
@@ -115,13 +140,19 @@ int _setenv(const char *name, const char *value, int overwrite)
 	new_ptr = _strcpy(new_ptr, name);
 	new_ptr = _strcat(new_ptr, "=");
 	new_ptr = _strcat(new_ptr, value);
+	printf("%s\n", new_ptr);
 /* add to environ using _putenv(new_ptr); */
 	ret_value = _putenv(new_ptr);
 	return (ret_value);
 }
 int main(void)
 {
-	char *name = "TEST";
+	char *name = "HOLBERTON";
+	char *value = "School";
+	int ret_set, ret_unset;
 
-	return (_setenv(name, "new variable", 0));
+	ret_set = _setenv(name, value, 0);
+	ret_unset = _unsetenv("PATH");
+	printf("Ret vals: %d %d\n", ret_set, ret_unset);
+	return (0);
 }

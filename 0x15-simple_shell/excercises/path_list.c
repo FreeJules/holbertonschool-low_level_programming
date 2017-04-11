@@ -66,6 +66,7 @@ list_t *path_dirs_list(char **array)
 	}
 	return (head);
 }
+/*
 int main(void)
 {
 	char **pathlist;
@@ -86,3 +87,4 @@ int main(void)
 	printf("array size %d\n", size);
 	return (0);
 }
+*/
