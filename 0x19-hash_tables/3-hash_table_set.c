@@ -1,6 +1,6 @@
 #include "hash_tables.h"
 /**
- * hash_table_set - adds an element to the hash table; in case of collision,
+ * hash_table_set - adds an element to the hash table, in case of collision,
  *  add the new node at the beginning of the list
  * @ht: hash table you want to add or update the key/value to
  * @key: is the key. key can not be an empty string
