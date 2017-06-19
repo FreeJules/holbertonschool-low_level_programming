@@ -1,0 +1,3 @@
+O(n) comparisons, O(1) swaps
+О(n^2) comparisons, swaps
+О(n^2) comparisons, swaps
