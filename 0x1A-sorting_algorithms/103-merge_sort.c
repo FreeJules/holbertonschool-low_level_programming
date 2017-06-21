@@ -60,7 +60,7 @@ void merging(int *a, int low, int mid, int high, int *b)
                 a[i] = b[i];
         }
 	printf("Merging...\n[left]: ");
-	for (i = 0; i <= mid; i++)
+	for (i = low; i <= mid; i++)
 	{
 		if (i != mid)
 			printf("%d, ", a[i]);
@@ -69,11 +69,10 @@ void merging(int *a, int low, int mid, int high, int *b)
 	}
 	printf("\n");
 	printf("[right]: ");
-	for (i = mid + 1; i < high; i++)
+	for (i = mid + 1; i <= high; i++)
 	{
-		printf("\ni: %d\n", i);
-		if (i != high - 1)
-			printf("%d, ", a[i]);
+		if (i != high)
+			printf("%d ", a[i]);
 		else
 			printf("%d", a[i]);
 	}
@@ -81,7 +80,6 @@ void merging(int *a, int low, int mid, int high, int *b)
 	printf("[Done] ");
 	for (i = low; i <= high; i++)
 	{
-		a[i] = b[i];
 		printf("%d", a[i]);
 		if (i != high)
 			printf(", ");
