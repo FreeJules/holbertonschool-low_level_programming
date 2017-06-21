@@ -71,21 +71,27 @@ void merging(int *a, int low, int mid, int high, int *b)
 	for (i = 0; i < cl; i++)
 	{
 		if (i != cl - 1)
-			printf("%d ", leftarr[i]);
+			printf("%d, ", leftarr[i]);
+		else
+			printf("%d", leftarr[i]);
 	}
 	printf("\n");
 	printf("[right]: ");
 	for (i = 0; i < cr; i++)
 	{
 		if (i != cr - 1)
-			printf("%d ", rightarr[i]);
+			printf("%d, ", rightarr[i]);
+		else
+			printf("%d", rightarr[i]);
 	}
 	printf("\n");
 	printf("[Done] ");
 	for (i = low; i <= high; i++)
 	{
 		a[i] = b[i];
-		printf("%d ", a[i]);
+		printf("%d", a[i]);
+		if (i != high)
+			printf(", ");
 	}
 	printf("\n");
 }
