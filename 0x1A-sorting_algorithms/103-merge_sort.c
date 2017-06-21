@@ -25,8 +25,7 @@ void merge_sort(int *array, size_t size)
  */
 void merging(int *a, int low, int mid, int high, int *b)
 {
-	int l1, l2, i, cl, cr;
-	int *leftarr, *rightarr;
+	int l1, l2, i;
 
 	l1 = low;
 	l2 = mid + 1;
