@@ -31,58 +31,51 @@ void merging(int *a, int low, int mid, int high, int *b)
 	l1 = low;
 	l2 = mid + 1;
 	i = low;
-	cl = 0;
-	cr = 0;
 
-	leftarr = malloc(sizeof(int) * high);
-	rightarr = malloc(sizeof(int) * high);
 	while (l1 <= mid && l2 <= high)
 	{
 		if (a[l1] <= a[l2])
 		{
 			b[i] = a[l1++];
-			leftarr[cl] = b[i];
-			cl = cl + 1;
 			i = i + 1;
 		}
 		else
 		{
 			b[i] = a[l2++];
-			rightarr[cr] = b[i];
 			i = i + 1;
-			cr = cr + 1;
 		}
 	}
 	while (l1 <= mid)
 	{
 		b[i] = a[l1++];
-		leftarr[cl] = b[i];
-		cl = cl + 1;
 		i = i + 1;
 	}
 	while (l2 <= high)
 	{
 		b[i] = a[l2++];
-		rightarr[cr] = b[i];
-		cr = cr + 1;
 		i = i + 1;
 	}
+	for (i = low; i <= high; i++)
+        {
+                a[i] = b[i];
+        }
 	printf("Merging...\n[left]: ");
-	for (i = 0; i < cl; i++)
+	for (i = 0; i <= mid; i++)
 	{
-		if (i != cl - 1)
-			printf("%d, ", leftarr[i]);
+		if (i != mid)
+			printf("%d, ", a[i]);
 		else
-			printf("%d", leftarr[i]);
+			printf("%d", a[i]);
 	}
 	printf("\n");
 	printf("[right]: ");
-	for (i = 0; i < cr; i++)
+	for (i = mid + 1; i < high; i++)
 	{
-		if (i != cr - 1)
-			printf("%d, ", rightarr[i]);
+		printf("\ni: %d\n", i);
+		if (i != high - 1)
+			printf("%d, ", a[i]);
 		else
-			printf("%d", rightarr[i]);
+			printf("%d", a[i]);
 	}
 	printf("\n");
 	printf("[Done] ");
