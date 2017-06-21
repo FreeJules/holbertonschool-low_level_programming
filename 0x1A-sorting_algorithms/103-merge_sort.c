@@ -1,5 +1,10 @@
 #include "sort.h"
-
+/**
+ * merge_sort - merge sort
+ * @array: array to sort
+ * @size: size of the array
+ * Return: none
+ */
 void merge_sort(int *array, size_t size)
 {
 	int *barray;
@@ -7,10 +12,19 @@ void merge_sort(int *array, size_t size)
 	barray = malloc(sizeof(int) * size);
 	if (barray == NULL)
 		return;
-	sort(array, 0, size-1, barray);
+	sort(array, 0, size - 1, barray);
 }
-
-void merging(int *a, int low, int mid, int high, int *b) {
+/**
+ * merging - merges
+ * @a: array to sort
+ * @low: lower bound index
+ * @mid: middle index
+ * @high: last index
+ * @b: new array
+ * Return: none
+ */
+void merging(int *a, int low, int mid, int high, int *b)
+{
 	int l1, l2, i, cl, cr;
 	int *leftarr, *rightarr;
 
@@ -22,9 +36,9 @@ void merging(int *a, int low, int mid, int high, int *b) {
 
 	leftarr = malloc(sizeof(int) * high);
 	rightarr = malloc(sizeof(int) * high);
-	while(l1 <= mid && l2 <= high)
+	while (l1 <= mid && l2 <= high)
 	{
-		if(a[l1] <= a[l2])
+		if (a[l1] <= a[l2])
 		{
 			b[i] = a[l1++];
 			leftarr[cl] = b[i];
@@ -39,14 +53,14 @@ void merging(int *a, int low, int mid, int high, int *b) {
 			cr = cr + 1;
 		}
 	}
-	while(l1 <= mid)
+	while (l1 <= mid)
 	{
 		b[i] = a[l1++];
 		leftarr[cl] = b[i];
 		cl = cl + 1;
 		i = i + 1;
 	}
-	while(l2 <= high)
+	while (l2 <= high)
 	{
 		b[i] = a[l2++];
 		rightarr[cr] = b[i];
@@ -54,36 +68,46 @@ void merging(int *a, int low, int mid, int high, int *b) {
 		i = i + 1;
 	}
 	printf("Merging...\n[left]: ");
-	for(i = 0; i < cl; i++)
+	for (i = 0; i < cl; i++)
 	{
 		if (i != cl - 1)
 			printf("%d ", leftarr[i]);
 	}
 	printf("\n");
 	printf("[right]: ");
-        for(i = 0; i < cr; i++)
+	for (i = 0; i < cr; i++)
 	{
 		if (i != cr - 1)
 			printf("%d ", rightarr[i]);
-        }
-        printf("\n");
+	}
+	printf("\n");
 	printf("[Done] ");
-	for(i = low; i <= high; i++)
+	for (i = low; i <= high; i++)
 	{
 		a[i] = b[i];
 		printf("%d ", a[i]);
 	}
 	printf("\n");
 }
-void sort(int *a, int low, int high, int *b) {
+/**
+ * sort - breakes it down into smaller arrays
+ * @a: array to sort
+ * @low: lower bound index
+ * @high: last index
+ * @b: new array
+ * Return: none
+ */
+void sort(int *a, int low, int high, int *b)
+{
 	int mid;
 
-	if(low < high) {
+	if (low < high)
+	{
 		mid = (low + high) / 2;
 		sort(a, low, mid, b);
-		sort(a, mid+1, high, b);
+		sort(a, mid + 1, high, b);
 		merging(a, low, mid, high, b);
-	} else {
-		return;
 	}
+	else
+		return;
 }
