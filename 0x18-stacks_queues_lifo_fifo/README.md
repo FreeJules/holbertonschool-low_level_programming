@@ -1,3 +1,5 @@
+## Stacks and Queues (LIFO and FIFO)
+
 ### What you should learn from this project
 
 - What is LIFO and FIFO
