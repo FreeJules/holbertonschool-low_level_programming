@@ -1,3 +1,5 @@
+## Hash Tables
+
 ### Readme
 
 - Watch What is a HashTable Data Structure - Introduction to Hash Tables , Part 0 and read Hash function, Hash table and Hash Functions.
