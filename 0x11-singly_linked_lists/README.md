@@ -1,9 +1,11 @@
-#### What you should learn from this project
+## Singly Linked Lists
 
- - When and why using linked lists vs arrays
- - How to build and use linked lists
+### What you should learn from this project
 
-#### Requirements
+- When and why using linked lists vs arrays
+- How to build and use linked lists
+
+### Requirements
 
 - Allowed editors: vi, vim, emacs
 - All your files will be compiled on Ubuntu 14.04 LTS
@@ -22,7 +24,8 @@
 - Don't forget to push your header file
 - All your header files should be include guarded
 
-#### File Descriptions
+### File Descriptions
+
 - 0-print_list.c - function that prints all the elements of a list_t list
 - 1-list_len.c - returns the number of elements in a linked list_t list
 - 2-add_node.c - adds a new node at the beginning of a list_t list
