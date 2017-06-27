@@ -1,7 +1,8 @@
-### Readme
+## Sorting Algorithms
+
+### Read
 
 - Read Sorting algorithm, Big O notation.
-
 - Watch 15 sorting algorithms in 6 minutes, Sorting algorithms animations
 
 ### What you should learn from this project
