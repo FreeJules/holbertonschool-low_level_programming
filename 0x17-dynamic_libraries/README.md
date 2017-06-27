@@ -1,3 +1,8 @@
+## Dynamic Libraries
+
+### Read
+- What is difference between Dynamic and Static library (Static and Dynamic linking), create dymanic libraries on Linux.
+
 ### What you should learn from this project
 
 - What is a dymanic library, how does it work, how to create one, and how to use it
