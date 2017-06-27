@@ -1,6 +1,6 @@
 ## Hello, World
 
-### Raed
+### Read
 - Read quickly through Everything you need to know to start with C. You do not have to learn everything in there yet, but make sure you read it entirely first.
 Then, read or watch: Dennis Ritchie, "C" Programming Language: Brian Kernighan, 10 Reasons Why C is Still the Best Programming Language, Why C Programming Is Awesome, Learning to program in C part 1 and part 2, Understanding C program Compilation Process and Betty, the official Holberton C coding style.
 - man gcc
