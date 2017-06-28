@@ -8,7 +8,7 @@ DEPS = m.h
 .PHONY: all clean oclean fclean re
 
 all: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	$(CC) $^ -o $(NAME)
 
 clean:
 	$(RM) *~ $(NAME)
