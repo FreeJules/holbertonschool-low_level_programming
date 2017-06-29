@@ -7,8 +7,8 @@ DEPS = m.h
 
 .PHONY: all clean oclean fclean re
 
-all: $(OBJ) $(DEPS)
-	$(CC) $(OBJ) $(DEPS) -o $(NAME)
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
 clean:
 	$(RM) *~ $(NAME)
