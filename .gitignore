@@ -1,4 +1,7 @@
 new_test
-main
+main/
+execs/
+test/
+tests/
 *~
 *#
