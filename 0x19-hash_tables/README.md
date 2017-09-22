@@ -1,8 +1,11 @@
 ## Hash Tables
 
-### Readme
+### Read
 
-- Watch What is a HashTable Data Structure - Introduction to Hash Tables , Part 0 and read Hash function, Hash table and Hash Functions.
+- [What is a HashTable Data Structure - Introduction to Hash Tables, Part 0](https://www.youtube.com/watch?v=MfhjkfocRR0)
+- [Hash function](https://en.wikipedia.org/wiki/Hash_function)
+- [Hash table](https://en.wikipedia.org/wiki/Hash_table)
+- [Hash Functions](http://www.cse.yorku.ca/~oz/hash.html)
 
 ### What you should learn from this project
 
@@ -28,6 +31,7 @@
 - Don't forget to push your header file
 - All your header files should be include guarded
 - Please use those data structures for this project:
+```
 /**
  * struct hash_node_s - Node of a hash table
  *
@@ -42,7 +46,8 @@ typedef struct hash_node_s
      char *value;
      struct hash_node_s *next;
 } hash_node_t;
-
+```
+```
 /**
  * struct hash_table_s - Hash table data structure
  *
@@ -56,7 +61,7 @@ typedef struct hash_table_s
      unsigned long int size;
      hash_node_t **array;
 } hash_table_t;
-
+```
 ### Tests
 - We strongly encourage you to work all together on a set of tests
 

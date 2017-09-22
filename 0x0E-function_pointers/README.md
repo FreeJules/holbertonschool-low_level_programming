@@ -2,9 +2,9 @@
 
 ### Read
 
-- Read Function Pointer in C, Pointers to functions.
-- Watch Function Pointers in C / C++.
-- recommended by Kiren: why pointers to functions?
+- Read [Function Pointer in C](http://www.geeksforgeeks.org/function-pointer-in-c/), [Pointers to functions](http://publications.gbdirect.co.uk/c_book/chapter5/function_pointers.html).
+- Watch [Function Pointers in C / C++](https://www.youtube.com/watch?v=ynYtgGUNelE).
+- recommended by Kiren: [why pointers to functions?](https://www.youtube.com/watch?v=sxTFSDAZM8s&feature=youtu.be)
 
 ### What you should learn from this project
 

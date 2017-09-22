@@ -2,8 +2,8 @@
 
 ### Read
 
-- Read 0x0d. Structures, struct (C programming language), Documentation: structures, 0x0d. typedef and structures, typedef.
-- Tip from Justin Marsh: Read more books! Programming in C Chapter 8, Working with Structures p163-189 (Advanced - not mandatory) Read The Lost Art of C Structure Packing
+- Read [0x0d. Structures, struct (C programming language)](https://en.wikipedia.org/wiki/Struct_(C_programming_language)), [Documentation: structures](https://github.com/holbertonschool/Betty/wiki/Documentation:-Data-structures), [0x0d. typedef and structures](https://docs.google.com/presentation/d/1KNVX4ThB6RGEOFvwMMrHsJzC3EO3G3BaES68szWy9_E/edit#slide=id.g13db114aac_0_250), [typedef](http://publications.gbdirect.co.uk/c_book/chapter8/typedef.html).
+- Tip from Justin Marsh: Read more books! [Programming in C](http://images.textbooks.com/TextbookInfo/Covers/0321776410.gif) Chapter 8, Working with Structures p163-189 (Advanced - not mandatory) Read [The Lost Art of C Structure Packing](http://www.catb.org/esr/structure-packing/)
 
 ### What you should learn from this project
 

@@ -1,5 +1,10 @@
 ## Stacks and Queues (LIFO and FIFO)
 
+### Read
+
+- [How do I use extern to share variables between source files in C?](http://stackoverflow.com/questions/1433204/how-do-i-use-extern-to-share-variables-between-source-files-in-c)
+- [Working with submodules](https://github.com/blog/2104-working-with-submodules)
+
 ### What you should learn from this project
 
 - What is LIFO and FIFO
@@ -28,7 +33,7 @@
 - The repository monty should be added as a submodule to your holbertonschool-low_level_programming repository, under the name 0x18-stacks_queues_lifo_fifo
 
 ### Please use those data structures for this project:
-
+```
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -44,6 +49,8 @@ typedef struct stack_s
         struct stack_s *prev;
         struct stack_s *next;
 } stack_t;
+```
+```
 /**
  * struct instruction_s - opcoode and its function
  * @opcode: the opcode
@@ -57,8 +64,10 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-
+```
 ### Compilation
 
 - Your code will be compiled this way:
+```
 $ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
+```

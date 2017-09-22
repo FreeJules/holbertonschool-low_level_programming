@@ -1,5 +1,9 @@
 ## Singly Linked Lists
 
+### Read
+
+- [Linked Lists](https://www.youtube.com/watch?v=udapt4FGY20&feature=youtu.be&t=2m10s)
+
 ### What you should learn from this project
 
 - When and why using linked lists vs arrays

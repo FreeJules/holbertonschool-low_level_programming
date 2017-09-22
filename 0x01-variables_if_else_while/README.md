@@ -2,9 +2,9 @@
 
 ### Read
 
-- Read (again) through Everything you need to know to start with C. You do not have to learn everything in there yet, but make sure you read it entirely first and make sure you understand the slides: “comments”, “Data types | Integer types”, “Declaration”, “Characters”, “Arithmetic operators”, “Affectations”, “Comparisons”, “Logical operators”, “if, if...else”, “while loops”.
-- Read or watch Keywords and identifiers, integers, Arithmetic Operators in C, If statements in C, if...else statement, Relational operators, Logical operators, while loop in C, While loop.
-- man ascii and every other man seen previously.
+- Read (again) through [Everything you need to know to start with C](https://docs.google.com/presentation/d/1ghto-TsXqgPRuEVmiCp7GvGttobdTLF4Yq8IRXwzvHY/edit#slide=id.p). You do not have to learn everything in there yet, but make sure you read it entirely first and make sure you understand the slides: “comments”, “Data types | Integer types”, “Declaration”, “Characters”, “Arithmetic operators”, “Affectations”, “Comparisons”, “Logical operators”, “if, if...else”, “while loops”.
+- Read or watch [Keywords and identifiers](http://publications.gbdirect.co.uk/c_book/chapter2/keywords_and_identifiers.html), [integers](http://publications.gbdirect.co.uk/c_book/chapter2/integral_types.html), [Arithmetic Operators in C](https://www.tutorialspoint.com/cprogramming/c_arithmetic_operators.htm), [If statements in C](http://www.cprogramming.com/tutorial/c/lesson2.html), [if...else statement](https://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm), [Relational operators](https://www.tutorialspoint.com/cprogramming/c_relational_operators.htm), [Logical operators](http://fresh2refresh.com/c-programming/c-operators-expressions/c-logical-operators/), [while loop in C](https://www.tutorialspoint.com/cprogramming/c_while_loop.htm), [While loop](https://www.youtube.com/watch?v=Ju1LYO9pkaI).
+- man [ascii](http://man7.org/linux/man-pages/man7/ascii.7.html) and every other man seen previously.
 - You do not need to learn about scanf, getc, getchar, EOF, EXIT_SUCCESS, time, rand, srand, RAND_MAX, for loops, do...while loops, functions.
 
 ### What you should learn from this project

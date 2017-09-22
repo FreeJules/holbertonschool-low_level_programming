@@ -1,5 +1,7 @@
 ## Bit Manipulation
 
+![bitwise](https://user-images.githubusercontent.com/6486822/30793525-7f2378ba-a177-11e7-84ca-2e59c80ee525.png)
+
 ### What you should learn from this project
 
 - Look for the right source of information without too much help

@@ -1,8 +1,12 @@
 ## Static Libraries
 
 ### Read
-- Read or watch What Is A "C" Library? What Is It Good For?, Creating A Static "C" Library Using "ar" and "ranlib", Using A "C" Library In A Program , What is difference between Dynamic and Static library(Static and Dynamic linking) (stop at 4:44) and C static libraries.
-- man ar, ranlib, nm.
+- [What Is A "C" Library? What Is It Good For?](http://docencia.ac.upc.edu/FIB/USO/Bibliografia/unix-c-libraries.html#what_is_a_library)
+- [Creating A Static "C" Library Using "ar" and "ranlib"](http://docencia.ac.upc.edu/FIB/USO/Bibliografia/unix-c-libraries.html#creating_static_archive)
+- [Using A "C" Library In A Program](http://docencia.ac.upc.edu/FIB/USO/Bibliografia/unix-c-libraries.html#using_static_archive)
+- [What is difference between Dynamic and Static library(Static and Dynamic linking)](https://www.youtube.com/watch?v=eW5he5uFBNM) (stop at 4:44)
+- [C static libraries](https://intranet.hbtn.io/concepts/61)
+- man: [ar](https://linux.die.net/man/1/ar), [ranlib](http://man7.org/linux/man-pages/man1/ranlib.1.html), [nm](https://linux.die.net/man/1/nm)
 - You do not need to learn about dynamic libraries, yet.
 
 ### What you should learn from this project
