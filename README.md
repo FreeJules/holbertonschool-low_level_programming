@@ -28,3 +28,4 @@
 - 0x1A-sorting_algorithms
 - 0x1B-makefiles
 - [0x1C. C - Binary trees](https://github.com/kjowong/holbertonschool-low_level_programming/tree/master/0x1C-binary_trees)
+- 0x1D-search_algorithms
