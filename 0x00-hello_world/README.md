@@ -1,12 +1,22 @@
 ## Hello, World
 
 ### Read
-- Read quickly through Everything you need to know to start with C. You do not have to learn everything in there yet, but make sure you read it entirely first.
-Then, read or watch: Dennis Ritchie, "C" Programming Language: Brian Kernighan, 10 Reasons Why C is Still the Best Programming Language, Why C Programming Is Awesome, Learning to program in C part 1 and part 2, Understanding C program Compilation Process and Betty, the official Holberton C coding style.
-- man gcc
-- man (3) printf, puts, putchar
-- (optional) And if you want to troll “C vs C++”, this is a very famous thread by Linus Torvalds.
-- You do not need to learn about getc or scanf.
+
+- [Everything you need to know to start with C](https://docs.google.com/presentation/d/1ghto-TsXqgPRuEVmiCp7GvGttobdTLF4Yq8IRXwzvHY/edit#slide=id.p)
+- [Dennis Ritchie](https://en.wikipedia.org/wiki/Dennis_Ritchie)
+- ["C" Programming Language: Brian Kernighan](https://www.youtube.com/watch?v=de2Hsvxaf8M)
+- [Why C Programming Is Awesome](https://www.youtube.com/watch?v=smGalmxPVYc)
+* Learning to program in C
+  * [part 1](https://www.youtube.com/watch?v=rk2fK2IIiiQ)
+  * [part 2](https://www.youtube.com/watch?v=FwpP_MsZWnU)
+- [Understanding C program Compilation Process](https://www.youtube.com/watch?v=VDslRumKvRA)
+- [Betty](https://github.com/holbertonschool/Betty/wiki)
+* man:
+  * [gcc](https://linux.die.net/man/1/gcc)
+  * [printf](https://linux.die.net/man/3/printf)
+  * [puts](https://linux.die.net/man/3/puts)
+  * [putchar](https://linux.die.net/man/3/putchar)
+- (optional) And if you want to troll “C vs C++”, this is a very famous thread by [Linus Torvalds](http://harmful.cat-v.org/software/c++/linus)
 
 ### What you should learn from this project
 
