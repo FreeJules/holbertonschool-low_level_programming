@@ -2,7 +2,10 @@
 
 ### Readme
 
-- Watch What is a HashTable Data Structure - Introduction to Hash Tables , Part 0 and read Hash function, Hash table and Hash Functions.
+- [What is a HashTable Data Structure - Introduction to Hash Tables, Part 0](https://www.youtube.com/watch?v=MfhjkfocRR0)
+- [Hash function](https://en.wikipedia.org/wiki/Hash_function)
+- [Hash table](https://en.wikipedia.org/wiki/Hash_table)
+- [Hash Functions](http://www.cse.yorku.ca/~oz/hash.html)
 
 ### What you should learn from this project
 
