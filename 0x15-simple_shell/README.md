@@ -60,8 +60,8 @@ $
 ```
 ### List of allowed functions and system calls
 
-| --- | --- | --- |
 | access (man 2 access)  | fstat (__fxstat) (man 2 fstat) | signal (man 2 signal) |
+| --- | --- | --- |
 | chdir (man 2 chdir)  | getcwd (man 3 getcwd)  | strtok (man 3 strtok) |
 | close (man 2 close)  | getline (man 3 getline)  | wait (man 2 wait) |
 | closedir (man 3 closedir)  | kill (man 2 kill) | waitpid (man 2 waitpid) |
@@ -71,7 +71,6 @@ $
 | free (man 3 free)  | perror (man 3 perror) | _exit (man 2 _exit) |
 | stat (__xstat) (man 2 stat) | read (man 2 read) | isatty (man 3 isatty) |
 | lstat (__lxstat) (man 2 lstat)  | readdir (man 3 readdir)  | fflush (man 3 fflush) |
-| --- | --- | --- |
 
 ### Compilation
 
