@@ -1,8 +1,8 @@
 ## More Malloc and Free
 
 ### Read
-- Read Do I cast the result of malloc? and read Automatic and dynamic allocation, malloc and free again.
-- man 3 exit, calloc, realloc
+- Read [Do I cast the result of malloc?](http://stackoverflow.com/questions/605845/do-i-cast-the-result-of-malloc) and read [Automatic and dynamic allocation, malloc and free](https://intranet.hbtn.io/concepts/62) again.
+- man 3: [exit](https://linux.die.net/man/3/exit), [calloc](https://linux.die.net/man/3/calloc), [realloc](https://linux.die.net/man/3/realloc)
 
 ### What you should learn from this project
 
