@@ -1,6 +1,12 @@
 ## Variadic Functions
 
-### Learn from this project:
+### Read
+
+Read or watch: [stdarg.h](https://en.wikipedia.org/wiki/Stdarg.h), [C - Variable Arguments](https://www.tutorialspoint.com/cprogramming/c_variable_arguments.htm), [Functions with Variable Argument Lists in C using va_list](http://www.cprogramming.com/tutorial/c/lesson17.html), [Variadic Functions](https://www.gnu.org/software/libc/manual/html_node/Variadic-Functions.html), and [Const Keyword](https://www.youtube.com/watch?v=1W4oyuOdXv8).
+
+man: [stdarg](https://linux.die.net/man/3/stdarg)
+
+### What you should learn from this project:
 
 - What are variadic functions
 - How to use va_start, va_arg and va_end macros
