@@ -61,7 +61,7 @@ $
 ### List of allowed functions and system calls
 
 | access (man 2 access)  | fstat (__fxstat) (man 2 fstat) | signal (man 2 signal) |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | chdir (man 2 chdir)  | getcwd (man 3 getcwd)  | strtok (man 3 strtok) |
 | close (man 2 close)  | getline (man 3 getline)  | wait (man 2 wait) |
 | closedir (man 3 closedir)  | kill (man 2 kill) | waitpid (man 2 waitpid) |
