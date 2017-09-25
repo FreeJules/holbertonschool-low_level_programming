@@ -1,5 +1,10 @@
 ## Stacks and Queues (LIFO and FIFO)
 
+### Read
+
+- [How do I use extern to share variables between source files in C?](http://stackoverflow.com/questions/1433204/how-do-i-use-extern-to-share-variables-between-source-files-in-c)
+- [Working with submodules](https://github.com/blog/2104-working-with-submodules)
+
 ### What you should learn from this project
 
 - What is LIFO and FIFO
