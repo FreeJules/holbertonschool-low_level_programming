@@ -62,4 +62,4 @@ typedef struct listint_s
 - Here is a quick tip to help you test your sorting algorithms with big sets of random integers: [Random.org](https://www.random.org/integer-sets/)
 
 ### Tasks
-- 0-bubble_sort.c, [Bubble-sort with Hungarian ("Csángó") folk dance](https://youtu.be/lyZQPjUT5B4), [Bubble sort](https://en.wikipedia.org/wiki/Bubble_sort)
+- 0-bubble_sort.c, [Bubble-sort with Hungarian ("Csángó") folk dance](https://youtu.be/lyZQPjUT5B4), [Bubble sort wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
