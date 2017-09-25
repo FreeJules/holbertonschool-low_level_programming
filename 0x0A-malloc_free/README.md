@@ -5,7 +5,7 @@
 - [0x0a - malloc & free - quick overview](https://docs.google.com/presentation/d/1awucWwPvD8BU783JVqzDXeSerU7eB504M6xRKKZndAI/edit#slide=id.p)
 - [Dynamic memory allocation in C - malloc calloc realloc free](https://www.youtube.com/watch?v=xDVC3wKjS64) (stop at 6:50)
 - [Automatic and dynamic allocation, malloc and free](https://intranet.hbtn.io/concepts/62) ("String literals and .rodata (advanced)" is not mandatory)
-- man [malloc](https://linux.die.net/man/3/malloc), [free](https://linux.die.net/man/3/free).
+- man: [malloc](https://linux.die.net/man/3/malloc), [free](https://linux.die.net/man/3/free).
 - You do not have to learn about calloc and realloc.
 
 ### What you should learn from this project
