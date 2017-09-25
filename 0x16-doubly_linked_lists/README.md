@@ -1,5 +1,9 @@
 ## Doubly Linked Lists
 
+### Read
+
+- [What is a Doubly Linked List](https://www.youtube.com/watch?v=k0pjD12bzP0)
+
 ### What you should learn from this project
 
 - What is a doubly linked list
