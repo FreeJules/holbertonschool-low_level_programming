@@ -37,12 +37,10 @@
   * log(n) -> O(log(n))
   * n * log(n) -> O(nlog(n))
   
-  ### Algorithms
+### Algorithms
   
-  - [Linear search algorithm](https://en.wikipedia.org/wiki/Linear_search)
-  - [Binary search algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm)
-  - [Jump search algorithm](https://en.wikipedia.org/wiki/Jump_search)
-  - [Interpolation search algorithm](https://en.wikipedia.org/wiki/Interpolation_search)
-  - [Exponential search algorithm](https://en.wikipedia.org/wiki/Exponential_search)
-
-  
+- [Linear search algorithm](https://en.wikipedia.org/wiki/Linear_search)
+- [Binary search algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+- [Jump search algorithm](https://en.wikipedia.org/wiki/Jump_search)
+- [Interpolation search algorithm](https://en.wikipedia.org/wiki/Interpolation_search)
+- [Exponential search algorithm](https://en.wikipedia.org/wiki/Exponential_search)
