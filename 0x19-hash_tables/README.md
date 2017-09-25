@@ -31,6 +31,7 @@
 - Don't forget to push your header file
 - All your header files should be include guarded
 - Please use those data structures for this project:
+```
 /**
  * struct hash_node_s - Node of a hash table
  *
@@ -59,7 +60,7 @@ typedef struct hash_table_s
      unsigned long int size;
      hash_node_t **array;
 } hash_table_t;
-
+```
 ### Tests
 - We strongly encourage you to work all together on a set of tests
 
