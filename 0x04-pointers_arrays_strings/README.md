@@ -1,7 +1,7 @@
 ## Pointers, Arrays and Strings
 
 ### Read
-- Read C - Arrays, C - Pointers, C - Strings, pointers and arrays.
+- Read [C - Arrays](https://www.tutorialspoint.com/cprogramming/c_arrays.htm), [C - Pointers](https://www.tutorialspoint.com/cprogramming/c_pointers.htm), [C - Strings](https://www.tutorialspoint.com/cprogramming/c_strings.htm), [pointers and arrays](https://intranet.hbtn.io/concepts/60).
 - You do not need to learn about pointers to functions, pointers to pointers, multidimensional arrays, arrays of structures, malloc and free - yet.
 
 ### What you should learn from this project
