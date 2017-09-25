@@ -2,7 +2,10 @@
 
 ### Read
 
-- Read or watch Arguments to main, argc and argv, What does int argc, char* argv[] mean? and how to compile with unused variables.
+- [Arguments to main](http://publications.gbdirect.co.uk/c_book/chapter10/arguments_to_main.html)
+- [argc and argv](http://crasseux.com/books/ctutorial/argc-and-argv.html)
+- [What does int argc, char* argv[] mean?](https://www.youtube.com/watch?v=aP1ijjeZc24)
+- [how to compile with unused variables](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=unused+variable+C)
 
 ### What you should learn from this project
 
