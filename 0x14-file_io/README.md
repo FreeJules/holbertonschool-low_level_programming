@@ -1,5 +1,11 @@
 ## File I/O
 
+### Read
+
+- [File descriptors](https://en.wikipedia.org/wiki/File_descriptor)
+- [C Programming in Linux Tutorial #024 - open() read() write() Functions](https://www.youtube.com/watch?v=dP3N8g7h8gY)
+- man: [open](https://linux.die.net/man/2/open), [close](https://linux.die.net/man/2/close) , [read](https://linux.die.net/man/2/read), [write](https://linux.die.net/man/2/write), [dprintf](https://linux.die.net/man/3/dprintf)
+
 ### What you should learn from this project
 
 - Look for the right source of information online
